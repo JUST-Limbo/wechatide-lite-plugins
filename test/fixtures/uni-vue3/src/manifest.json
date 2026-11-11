@@ -1,0 +1,8 @@
+{
+    "name": "Lite 插件测试工程",
+    "appid": "",
+    "versionName": "1.0.0",
+    "versionCode": "100",
+    "mp-weixin": { "appid": "touristappid", "setting": { "urlCheck": false } },
+    "vueVersion": "3"
+}

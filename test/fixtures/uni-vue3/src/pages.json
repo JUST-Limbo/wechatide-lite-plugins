@@ -1,0 +1,3 @@
+{
+    "pages": [{ "path": "pages/index/index", "style": { "navigationBarTitleText": "Lite 测试" } }]
+}
