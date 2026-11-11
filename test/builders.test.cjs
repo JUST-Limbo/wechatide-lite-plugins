@@ -82,6 +82,8 @@ for (const version of ["vite", "vite-modern"]) {
         })
         await waitFor(() => events.some(event => event.code === "ERROR"))
         assert.equal(f.calls().length, 0)
+        // 首次失败后 Chokidar 仍在异步注册文件监听，留出初始化时间再模拟用户编辑。
+        await new Promise(resolve => setTimeout(resolve, 300))
         fs.writeFileSync(entry, "export const value = 1")
         await waitFor(() => events.some(event => event.code === "BUNDLE_END"))
         await waitFor(() => f.calls().length === 1)
