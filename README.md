@@ -14,7 +14,7 @@
 npm install -D github:JUST-Limbo/wechatide-lite-plugins
 ```
 
-需要 Node.js 20.19+ 或 22+，以及提供 `wechatide` 接口的微信开发者工具。此仓库当前使用 Node.js 22.22.0 测试。Windows 官方接口已在本机开发者工具 2.02.2609250 上验证。
+插件自身要求 Node.js 16+；实际使用还需满足项目中 uni-app、webpack 或 Vite 的 Node.js 版本要求。
 
 ## uni-app Vue 2 / webpack
 

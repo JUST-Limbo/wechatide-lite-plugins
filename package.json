@@ -4,7 +4,7 @@
     "description": "Open WeChat DevTools Lite after the first successful webpack or Vite watch build.",
     "license": "MIT",
     "engines": {
-        "node": ">=20.19.0"
+        "node": ">=16.0.0"
     },
     "exports": {
         "./webpack": {

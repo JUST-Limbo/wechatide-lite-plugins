@@ -11,6 +11,8 @@
 
 ## 自动化验证
 
+插件运行时最低版本另用 Node.js 16.0.0 验证：CLI 子进程参数传递、取消授权等待、webpack 构建完成钩子及 Vite ESM 入口均通过。此项使用假 CLI，不等同于所有构建工具都支持 Node.js 16；使用方仍需满足其实际安装的 uni-app、webpack、Vite 及依赖的 Node.js 要求。仓库开发工具和完整测试使用上面的本地环境。
+
 `npm test` 共 19 项，覆盖入口发现、缓存、授权状态、取消以及真实 webpack / Vite 持续构建。构建器测试先制造语法错误，修复后验证首次成功调用一次开窗，后续热更新不重复，普通生产构建不调用。
 
 `npm run test:uni` 共 1 项，使用仓库内最小 uni-app 工程，真正生成微信小程序产物，检查 `app.json`、`project.config.json` 和页面 WXML；修改页面后确认 WXML 更新、开窗调用次数仍为一次。
